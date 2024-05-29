@@ -93,4 +93,5 @@ You should see an output indicating that your flow has been successfully run and
 
 Congratulations! You've created and run your first Prefect flow. This tutorial covered the basics of defining and running a Prefect flow. From here, you can explore more advanced features of Prefect, such as scheduling, retries, and parameterization.
 
-For more information, visit the Prefect documentation.
+For more information, visit the Prefect documentation:
+> https://docs.prefect.io/latest/
