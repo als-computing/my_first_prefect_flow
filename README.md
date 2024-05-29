@@ -65,7 +65,11 @@ if __name__ == "__main__":
 
 As you can see, we have added a few decorators to our Python functions, `@task` and one `@flow`. A Prefect Task can be thought of as a singular unit of work, whereas the Flow can manage the execution order of multiple tasks into a coherent workflow.
 
-You might also notice that we imported `get_run_logger` from Prefect. This allows us to capture information about our workflow for monitoring and troubleshooting, similar to `print()` but with nicer formatting and more details. To add a log, you can this pattern: `logger.info(f'Flow action started with id: {flow_run_id}')`. Notice you can also include variables for more meaningful messages.
+You might also notice that we imported `get_run_logger` from Prefect. This allows us to capture information about our workflow for monitoring and troubleshooting, similar to `print()` but with nicer formatting and more details. To add a log, you can follow this pattern: 
+
+    logger = get_run_logger() #The logger must be initialized once
+    x = 10
+    logger.info(f'The value of x is: {x}') # Notice you can also include variables for more meaningful messages.
 
 ## Visualizing Your Flow
 
@@ -89,6 +93,4 @@ You should see an output indicating that your flow has been successfully run and
 
 Congratulations! You've created and run your first Prefect flow. This tutorial covered the basics of defining and running a Prefect flow. From here, you can explore more advanced features of Prefect, such as scheduling, retries, and parameterization.
 
-For more information, visit the Prefect documentation:
-
-https://docs.prefect.io/latest/
+For more information, visit the Prefect documentation.
