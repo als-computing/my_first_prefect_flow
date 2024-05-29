@@ -75,19 +75,22 @@ You might also notice that we imported `get_run_logger` from Prefect. This allow
 
 Prefect comes with a visualization tool that helps you see the structure and status of your flow. You can use the Prefect UI to monitor your flow in real time.
 
+Note: If you have already set up Prefect Cloud your results will be visible at `https://app.prefect.cloud` and not your local server. If you haven't set up Cloud, follow the next steps:
+
 To start the Prefect server locally, run this in your terminal:
 
     prefect server start
 
-Then, either click the link that appears in your terminal or open your web browser and go to `http://localhost:8080` (make sure the port number is correct). Once you run the next step, you will be able to see your flow and its execution history.
+Then, either click the link that appears in your terminal or open your web browser and go to `http://localhost:4200` (make sure the port number is correct). Once you run the next step, you will be able to see your flow and its execution history.
+
 
 ## Running Your Flow
 
-To run your flow, you'll use the Prefect CLI. Make sure your flow is saved in a file, such as `my_first_flow.py`. In your terminal, run this command:
+To run your flow, you'll use the Prefect CLI. Make sure your flow is saved in a file, such as `my_first_flow.py`. In your terminal (or a new terminal if you spun up a local server in the previous step), run this command:
 
     python my_first_flow.py
 
-You should see an output indicating that your flow has been successfully run and tasks have been executed.
+You should see an output indicating that your flow has run successfully and tasks have been executed.
 
 ## Conclusion
 
