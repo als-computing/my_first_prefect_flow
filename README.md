@@ -67,7 +67,7 @@ As you can see, we have added a few decorators to our Python functions, `@task` 
 
 You might also notice that we imported `get_run_logger` from Prefect. This allows us to capture information about our workflow for monitoring and troubleshooting, similar to `print()` but with nicer formatting and more details. To add a log, you can follow this pattern: 
 
-    logger = get_run_logger() #The logger must be initialized once
+    logger = get_run_logger() # The logger must be initialized once
     x = 10
     logger.info(f'The value of x is: {x}') # Notice you can also include variables for more meaningful messages.
 
